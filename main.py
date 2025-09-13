@@ -8,7 +8,7 @@ import os, uuid
 from database import init_db, ejecutar, consultar
 
 app = FastAPI()
-init_db()
+init_db()  # Inicializa la base de datos
 
 # Carpeta para fotos
 os.makedirs("fotos", exist_ok=True)
