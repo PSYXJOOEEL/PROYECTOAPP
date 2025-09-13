@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>🌱 Mi Invernadero</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌱 Mi Invernadero</h1>
+            <p class="subtitle">Lleva el control de tu cultivo fácilmente</p>
+        </header>
+
+        <section class="form-section">
+            <h2>➕ Agregar registro</h2>
+            <form action="/agregar" method="post" enctype="multipart/form-data" class="form-card">
+                <label>Categoría:</label>
+                <select name="categoria">
+                    <option>Riego</option>
+                    <option>Fertilización</option>
+                    <option>Crecimiento</option>
+                    <option>Foto</option>
+                </select>
+
+                <label>Detalle:</label>
+                <input type="text" name="detalle" placeholder="Escribe un detalle..." required>
+
+                <label>Foto (opcional):</label>
+                <input type="file" name="foto">
+
+                <button type="submit" class="btn-primary">✅ Guardar</button>
+            </form>
+        </section>
+
+        <section class="registros-section">
+            <h2>📋 Últimos registros</h2>
+            <div class="registros-list">
+                {% for r in registros %}
+                <div class="registro-card">
+                    <p><span class="fecha">{{ r.fecha }}</span></p>
+                    <p><b>{{ r.categoria }}</b>: {{ r.detalle }}</p>
+                    {% if r.foto %}
+                        <a href="{{ r.foto }}" target="_blank" class="btn-link">📷 Ver foto</a>
+                    {% endif %}
+                    <form action="/borrar" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="{{ r.id }}">
+                        <button type="submit" class="btn-danger">🗑️ Borrar</button>
+                    </form>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+</body>
+</html>
