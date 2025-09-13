@@ -1,158 +1,56 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* General */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #d9fdd3, #f1f8e9);
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f0f9f0;
     color: #333;
 }
 
 .container {
-    max-width: 800px;
-    margin: auto;
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Header */
-header {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-header h1 {
-    font-size: 2.5rem;
+h1, h2 {
     color: #2e7d32;
 }
 
-.subtitle {
-    font-size: 1rem;
-    color: #555;
-    margin-top: 8px;
+form {
+    margin-bottom: 30px;
 }
 
-/* Form */
-.form-section h2 {
-    margin-bottom: 10px;
-    color: #1b5e20;
-}
-
-.form-card {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
-}
-
-label {
-    display: block;
-    margin-top: 12px;
-    font-weight: bold;
-    color: #333;
-}
-
-input, select {
-    margin-top: 5px;
-    padding: 10px;
+input[type="text"], select, input[type="file"] {
     width: 100%;
-    border-radius: 8px;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    font-size: 1rem;
 }
 
-input[type="file"] {
-    background: #fff;
-}
-
-.btn-primary {
-    margin-top: 15px;
-    width: 100%;
-    background: #2e7d32;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    background: #1b5e20;
-}
-
-/* Registros */
-.registros-section {
-    margin-top: 30px;
-}
-
-.registros-list {
-    display: grid;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.registro-card {
-    background: #f1f8f4;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-}
-
-.fecha {
-    font-size: 0.9rem;
-    color: #777;
-}
-
-.btn-link {
-    display: inline-block;
-    margin-top: 8px;
-    text-decoration: none;
-    color: #1e88e5;
-    font-weight: bold;
-}
-
-.btn-link:hover {
-    text-decoration: underline;
-}
-
-.btn-danger {
-    margin-top: 10px;
-    background: #c62828;
+button {
+    background-color: #2e7d32;
     color: white;
+    padding: 10px 15px;
     border: none;
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.btn-danger:hover {
-    background: #8e0000;
+button:hover {
+    background-color: #1b5e20;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    .container {
-        padding: 15px;
-    }
+ul {
+    list-style: none;
+    padding: 0;
+}
 
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    .btn-primary, .btn-danger {
-        font-size: 0.9rem;
-        padding: 10px;
-    }
+li {
+    background: #e8f5e9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
 }
